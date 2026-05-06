@@ -1,0 +1,259 @@
+@font-face {
+    font-family: PixelifySans;
+    src: url(../Pixelify_Sans/PixelifySans-VariableFont_wght.ttf);
+}
+
+*{
+    font-family: PixelifySans;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(../img/hintergrund/Düsterer_Hintergrund_3.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 120px;
+    z-index: 999;
+}
+
+.popup-content {
+    background: linear-gradient(145deg, #F9B315, #e0a000);
+    color: rgb(61, 58, 72);
+    padding: 30px;
+    border-radius: 15px;
+    width: 320px;
+    text-align: center;
+    border: 2px solid rgba(0,0,0,0.3);
+    box-shadow: 0 0 25px rgba(249,179,21,0.7),0 0 10px rgba(0,0,0,0.7);
+    animation: popupFade 0.6s ease;
+}
+
+.popup-content h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.popup-content button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #357172, #244f50);
+    color: black;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.popup-content button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(53,113,114,0.9);
+}
+
+@keyframes popupFade {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#SettingsButton{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 12px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#SettingsButton:hover{
+    transform: scale(1.1) rotate(50deg);
+}
+
+#SettingsButton img{
+    width: 40px;
+}
+
+#Überschrift{
+    position: absolute;
+    justify-content: center;
+    top: 7vw;
+    background: linear-gradient(145deg, #F9B315, #e0a000);
+    padding: 35px 55px;
+    border-radius: 20px;
+    color: rgb(61, 58, 72);
+    font-size: 30px;
+    box-shadow: 0 0 20px rgba(249,179,21,0.6);
+    transition: 0.3s;
+}
+
+#Buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    position: absolute;
+    left: 63vw;
+    top: 25vw;
+}
+
+.Button{
+    background: linear-gradient(135deg, #357172, #244f50);
+    border: none;
+    width: 300px;
+    height: 60px;
+    border-radius: 20px;
+    font-size: 25px;
+    cursor: pointer;
+    color: black;
+    box-shadow: 0 0 15px rgba(53,113,114,0.6);
+    transition: 0.3s;
+    text-decoration: none;
+    margin: auto;
+    text-align: center;
+    display: grid;
+    place-items: center;
+}
+
+.Button:hover{
+    transform: scale(1.08) translateY(-3px);
+    box-shadow: 0 0 25px rgba(53,113,114,0.9);
+}
+
+.Button:active{
+    transform: scale(0.97);
+}
+
+#Karakter{
+    position: absolute;
+    left: 20vw;
+    top: 17vw;
+    transition: 0.3s;
+}
+
+
+#Karakter img{
+    width: 400px;
+}
+
+#settings{
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    width: min(80vw, 520px);
+    height: min(80vh, 560px);
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 16px;
+}
+
+#SettingsContent{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg, #F9B315, #e0a000);
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px;
+    position: relative;
+    color: rgb(61, 58, 72);
+}
+
+#CloseSettings{
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#CloseSettings:hover{
+    transform: scale(1.05);
+}
+
+#SettingsHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+#SettingsHeader h2{
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 0.02em;
+    color: black;
+}
+
+#SettingsBody{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+
+.SettingsGroup p{
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: rgb(34, 34, 34);
+}
+
+.SettingsButton{
+    width: 100%;
+    min-height: 52px;
+    border-radius: 16px;
+    border: none;
+    background: linear-gradient(135deg, #357172, #244f50);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.SettingsButton:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 14px 24px rgba(0, 0, 0, 0.22);
+}
+

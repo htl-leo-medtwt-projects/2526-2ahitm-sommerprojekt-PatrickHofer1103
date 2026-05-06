@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprite Game</title>
+    <link rel="stylesheet" href="./css/game.css">
+    <script src="./js/spritegame_detectCollisions.js" defer></script>
+    <script src="./js/spritegame_keyevents.js" defer></script>
+    <script src="./js/spritegame_player.js" defer></script>
+    <script src="./js/spritegame_loop.js" defer></script>
+    <script src="./js/spritegame_main.js" defer></script>
+</head>
+<body>
+    <div id="dashboard">
+        <div id="debug_output"></div>
+    </div>
+
+    <div id="SettingsButton" onclick="settings()">
+        <img src="../img/Sonstige/Einstellungen.png" alt="">
+
+    </div>
+
+    <div id="surface">
+        <div id="player">
+            <img id="spriteImg" src = "./img/Alchemist_0.jpg" alt="sprite"/>
+        </div>
+        <div id="Sprechblase">
+            <img src="./img/text.png " alt="">
+        </div>
+        <div id="Sessel"></div>
+
+        <video id="Video" src="./video/Startraum.mp4" width="1920px" height="1080px">
+            <source src="./video/Startraum.mp4" type="video/mp4">
+        </video>
+
+        <div id="StartGame">
+
+        </div>
+    </div>
+</body>
+</html>

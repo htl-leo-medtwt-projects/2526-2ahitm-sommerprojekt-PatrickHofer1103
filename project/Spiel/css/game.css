@@ -1,0 +1,66 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+#surface {
+  background-image: url(../img/hintergrund/Startraum.webp);
+  height: 1080px;
+  width: 1920px;
+  position: relative; 
+  margin: 0 auto;
+  transform-origin: top;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#player {
+  position: absolute;
+  width: 37px;
+  height: 28px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+#spriteImg {
+  height: 300px;
+  bottom: 49px;
+  position: relative;
+}
+
+#dashboard{
+  display: flex;
+  position: absolute;
+  visibility: hidden;
+}
+
+#Sprechblase{
+  display: flex;
+  position: relative;
+  top: 600px;
+  left: 450px;
+}
+
+#Sprechblase img{
+    width: 60px;
+    height: auto;
+    transform: scaleX(-1);
+}
+
+#Sessel{
+  display: flex;
+  position: relative;
+  background-color: rgb(136, 112, 255);
+  width: 70px;
+  height: 70px;
+  top: 510px;
+  left: 800px;
+}
+#Video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
